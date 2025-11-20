@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+
+  db:
+    image: postgres:15-alpine
+    container_name: notes_db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: notesdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - notes_data:/var/lib/postgresql/data
+
+  backend:
+    build: ../backend
+    container_name: notes_backend
+    restart: always
+    ports:
+      - "8080:8080"
+    env_file:
+      - ../backend/.env
+    depends_on:
+      - db
+    volumes:
+      - ../backend/uploads:/app/uploads
+
+  frontend:
+    build: ../frontend
+    container_name: notes_frontend
+    restart: always
+    ports:
+      - "5173:4173"    # host 5173 → container 4173
+    command: ["npm", "run", "preview"]  # pastikan dijalankan preview
+    depends_on:
+      - backend
+
+
+volumes:
+  notes_data:
