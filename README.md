@@ -143,6 +143,17 @@ Copy code
 | PUT | `/notes/:id` | Update note |
 | DELETE | `/notes/:id` | Delete note |
 
+### **LOGS**
+[GIN] 2025/11/20 - 08:11:36 | 200 |    869.7765ms |             ::1 | POST     "/api/auth/login"
+[GIN] 2025/11/20 - 08:11:36 | 200 |      1.5636ms |             ::1 | GET      "/api/notes"
+[GIN] 2025/11/20 - 08:11:36 | 200 |       593.3µs |             ::1 | GET      "/api/notes"
+[GIN] 2025/11/20 - 08:12:26 | 200 |     32.4051ms |             ::1 | POST     "/api/notes"
+[GIN] 2025/11/20 - 08:12:26 | 200 |            0s |             ::1 | GET      "/api/notes"
+[GIN] 2025/11/20 - 08:12:26 | 200 |            0s |             ::1 | GET      "/api/notes"
+[GIN] 2025/11/20 - 08:12:26 | 200 |       510.5µs |             ::1 | GET      "/uploads/1763601146387567700_red-velvet.jpeg"
+[GIN] 2025/11/20 - 08:12:33 | 200 |      4.9881ms |             ::1 | DELETE   "/api/notes/6"
+[GIN] 2025/11/20 - 08:12:33 | 200 |            0s |             ::1 | GET      "/api/notes"
+
 ---
 
 ## 🧑‍💻 Author
