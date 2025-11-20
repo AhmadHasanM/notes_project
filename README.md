@@ -151,12 +151,7 @@ Full-Stack Developer
 
 ---
 
-Jika kamu ingin versi:
-✨ Lebih profesional  
-✨ Dengan badge GitHub (build passing, technologies, license, dll)  
-✨ Dengan screenshot UI  
 
-Tinggal bilang!
 
 <img width="1894" height="969" alt="image" src="https://github.com/user-attachments/assets/dbe52f35-de83-4737-829f-008452f3aaf4" />
 <img width="1892" height="972" alt="image" src="https://github.com/user-attachments/assets/d248cb5f-2053-4bf8-afac-e54252c6aa1f" />
